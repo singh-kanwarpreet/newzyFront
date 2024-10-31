@@ -1,0 +1,27 @@
+/* header.css */
+
+.nav-ext {
+  background-color: #2b2d42 !important;
+  color: white !important;
+  list-style: none;
+  padding: 1rem;
+}
+
+@media (max-width: 658px) {
+  .nav-ext {
+    display: flex !important;
+    flex-direction: column !important; 
+    justify-content: center !important;
+    align-items: center !important;
+  } 
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
