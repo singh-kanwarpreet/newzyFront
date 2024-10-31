@@ -8,7 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const CardLayout = () => {
   const { topic } = useParams();
-  const req = import.meta.env.VITE_SERVER+`/news/search/${topic}`;
+  const req = import.meta.env.VITE_SERVER + `/news/search/${topic}`;
  
   const [item, setItem] = useState([]);
   const [load, setLoad] = useState(true);
@@ -31,16 +31,23 @@ const CardLayout = () => {
 
   if (load) {
     return (
-        <>
-        <div className="center">
+      <div className="center">
         <Spinner animation="grow" variant="dark" />
-        </div> 
-        </>
-      )
+      </div>
+    );
   }
 
   if (error) {
     return <Alert key="danger" variant="danger">{error}</Alert>;
+  }
+
+  // Check if there are no items and show a message if empty
+  if (item.length === 0) {
+    return (
+      <Alert key="info" variant="info">
+        No articles found for this topic. Please try a different search.
+      </Alert>
+    );
   }
 
   return (
