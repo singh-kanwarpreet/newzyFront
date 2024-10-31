@@ -45,7 +45,7 @@ function BasicExample() {
     };
 
     try {
-      const response = await axios.post(process.env.SERVER+'/notes', formData);
+      const response = await axios.post(import.meta.env.VITE_SERVER+'/notes', formData);
       if (response.status === 200) {
         console.log('Form submitted successfully');
         setHeading('');

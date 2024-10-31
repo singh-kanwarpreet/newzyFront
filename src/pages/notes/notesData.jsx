@@ -20,7 +20,7 @@ function SmallExample() {
           return setError('Please Login First');
         }
 
-        const response = await axios.post(process.env.SERVER+'/notes/data', { email });
+        const response = await axios.post(import.meta.env.VITE_SERVER+'/notes/data', { email });
         setNotes(response.data);
       } catch (error) {
         setError('Error fetching item details.');

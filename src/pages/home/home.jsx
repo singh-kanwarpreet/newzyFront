@@ -15,9 +15,8 @@ export default function HomePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
     axios
-      .get(process.env.SERVER+'/news/')
+      .get(import.meta.env.VITE_SERVER+'/news/')
       .then((response) => {
         setItem(response.data);
         setLoading(false);

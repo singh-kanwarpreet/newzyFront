@@ -14,7 +14,7 @@ export default function App() {
 
   const fetchData = (category, setData) => {
     axios
-      .get(process.env.SERVER+`/news/category/${category}`)
+      .get(import.meta.env.VITE_SERVER+`/news/category/${category}`)
       .then((response) => {
         setLoading(false);
         setData(response.data);

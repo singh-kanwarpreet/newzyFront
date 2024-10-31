@@ -8,7 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const CardLayout = () => {
   const { topic } = useParams();
-  const req = process.env.SERVER+`/news/search/${topic}`;
+  const req = import.meta.env.VITE_SERVER+`/news/search/${topic}`;
  
   const [item, setItem] = useState([]);
   const [load, setLoad] = useState(true);

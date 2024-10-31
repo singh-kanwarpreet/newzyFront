@@ -14,7 +14,7 @@ export default function Topic() {
   useEffect(() => {
     const fetchData = async (category) => {
       try {
-        const response = await axios.get(`http://localhost:3000/news/category/${category}`);
+        const response = await axios.get(import.meta.env.VITE_SERVER+`/news/category/${category}`);
         setData(response.data);
         setError(null);
       } catch (error) {

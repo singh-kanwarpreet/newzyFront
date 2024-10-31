@@ -7,14 +7,16 @@ import Alert from 'react-bootstrap/Alert';
 import Spinner from 'react-bootstrap/Spinner';
 
 const CardLayout = () => {
+
   const { topic } = useParams();
-  const req = topic !== "trend" ? process.env.SERVER+`/news/category/${topic}` : process.env.SERVER+`/news`;
- 
+  const req = topic !== "trend" ? import.meta.env.VITE_SERVER+`/news/category/${topic}` : import.meta.env.VITE_SERVER+`/news`;
+
   const [item, setItem] = useState([]);
   const [load, setLoad] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
     axios
       .get(req)
       .then((response) => {

@@ -22,7 +22,7 @@ const ItemDetails = () => {
    
     const fetchItem = async () => {
       try {
-        const response = await axios.get(process.env.SERVER+`/news/${id}`);
+        const response = await axios.get(import.meta.env.VITE_SERVER+`/news/${id}`);
         setItem(response.data);
       } catch (error) {
         setError('Error fetching item details.');
@@ -38,7 +38,7 @@ const ItemDetails = () => {
   useEffect(() => {
     const fetchRecommendations = async () => {
       try {
-        const response = await axios.get(process.env.SERVER+`/news/recommendation/${id}`);
+        const response = await axios.get(import.meta.env.VITE_SERVER+`/news/recommendation/${id}`);
         setRecommend(response.data);
       } catch (error) {
         setError('Error fetching recommendations.');

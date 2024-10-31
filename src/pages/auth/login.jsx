@@ -14,7 +14,7 @@ const Login = () => {
     setErrorMessage(''); // Reset error message on new submit
 
     try {
-      const response = await axios.post(process.env.SERVER+'/login', { email, password });
+      const response = await axios.post(import.meta.env.VITE_SERVER+'/login', { email, password });
 
       if (response.data.success) {
         const userData = { email }; 
