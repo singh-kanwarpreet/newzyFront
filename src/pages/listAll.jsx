@@ -47,7 +47,7 @@ const CardLayout = () => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row mt-5">
         {item.map((item) => (
           <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={item._id}>
             <div className="card h-100">

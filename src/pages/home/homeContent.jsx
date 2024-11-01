@@ -35,7 +35,7 @@ function Content({ info }) {
           {info.slice(0, 3).map((item, index) => (
             <Col key={index} className="d-flex justify-content-center mb-4">
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={item.image} style={{ height: '12rem' }} />
+                <Card.Img variant="top" className="object-fit-cover" src={item.image} style={{ height: '12rem' }} />
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
                   <Card.Text>

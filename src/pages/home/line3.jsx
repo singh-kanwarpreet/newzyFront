@@ -14,7 +14,7 @@ function AutoLayoutExample({ info }) {
       <Row className="m-0 d-flex justify-content-center align-items-center">
         {info.slice(1, 4).map((item, index) => (
           <Col key={index} className="d-flex justify-content-center mb-4">
-            <Card style={{ width: '18rem', border: 'none' }}>
+            <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src={item.image} style={{ height: '12rem', objectFit: 'cover' }} />
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>

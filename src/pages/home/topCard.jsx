@@ -1,22 +1,24 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import './home.css';
+import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import './home.css';
 
 export default function Home({ info }) {
   if (!info || info.length === 0) {
-    return <Alert key="secondary" variant="secondary">Data is not there</Alert>;
+    return <Alert key="secondary" variant="secondary">Data is not available</Alert>;
   }
+
   return (
-    <Container fluid className="mt-3 ps-0 p-0 pe-0">
-      <Row className="ms-0 me-0 p-0">
-        <Col md={12} lg={7} className="p-0"> 
-          <img src={info[0].image} className="img-fluid top" alt="Responsive" />
+    <Container fluid className="mt-5 ps-0 pe-0">
+      <Row className="ms-0 me-0 mb-3s p-0">
+        <Col md={12} lg={7} className="p-0">
+          <img 
+            src={info[0].image} 
+            className="img-fluid object-fit-cover w-75 ms-5" 
+            alt="Responsive" 
+          />
         </Col>
-        <Col md={12} lg={5}> {/* Adjust to full width on md */}
+        <Col md={12} lg={5} className="d-flex flex-column justify-content-center"> {/* Use flex to center content */}
           <div className="ms-3 mt-2">
             <h5 className="mb-3 fw-bold">&#x2022; Hot Topic</h5>
             <h3 className="mb-5 fw-bold">{info[0].title}</h3>
@@ -33,6 +35,8 @@ export default function Home({ info }) {
           </div>
         </Col>
       </Row>
+      <br /><br />
+      <hr />
     </Container>
   );
 }

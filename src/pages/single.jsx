@@ -65,12 +65,12 @@ const ItemDetails = () => {
 
   return (
     <>
-      <div className="row d-flex justify-content-center mb-3 m-0">
+      <div className="row d-flex justify-content-center mb-3 m-0 mt-5">
         <Card style={{ width: '60%', border: 'none' }}>
           <Card.Text className="text-center fs-2">
             <b>{item?.title}</b>
           </Card.Text>
-          <Card.Img variant="top" src={item?.image} style={{ height: '300px' }} />
+          <Card.Img variant="top" src={item?.image} className="object-fit-cover" style={{ height: '300px' }} />
           <Card.Body>
             <Card.Text>{item?.description}</Card.Text>
           </Card.Body>

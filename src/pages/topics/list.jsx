@@ -44,19 +44,20 @@ export default function List({ data }) {
   return (
     <>
     <div className="container">
-  <div className="row justify-content-center">
+  <div className="row justify-content-center mt-5">
     {ar.map((obj, index) => (
       <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={index}>
         <Card style={{ width: '100%' }}> {/* Adjust width to 100% of column */}
           <Card.Img
             variant="top"
             src={obj.image}
+            className="object-fit-cover"
             style={{ height: '200px', objectFit: 'cover' }}
           />
           <Card.Body>
             <Card.Title>{obj.title}</Card.Title>
             <Card.Text>{obj.description}</Card.Text>
-            <Button variant="primary"><Link to={`/news/${obj._id}`} style={{ color: 'inherit', textDecoration: 'none' }}>Read Full</Link></Button>
+            <Button variant="dark"><Link to={`/news/${obj._id}`} style={{ color: 'inherit', textDecoration: 'none' }}>Read Full</Link></Button>
           </Card.Body>
         </Card>
       </div>
