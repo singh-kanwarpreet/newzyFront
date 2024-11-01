@@ -63,7 +63,7 @@ function BasicExample() {
   };
 
   return (
-    <div className="offset-3">
+    <div className="offset-3 mt-5">
       <Form style={{ width: '75%' }} onSubmit={handleSubmit}>
         {error && <div className="alert alert-danger">{error}</div>}
         <Form.Group className="mb-3" controlId="formBasicEmail">

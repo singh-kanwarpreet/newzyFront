@@ -80,7 +80,7 @@ function SmallExample() {
   }
 
   return (
-    <div style={{ width: "75%" }} className="offset-1">
+    <div style={{ width: "75%" }} className="offset-1 mt-5">
       <Button variant="dark" className="mb-4" onClick={downloadPDF}>
         Download PDF
       </Button>
